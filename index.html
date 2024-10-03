@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Mig</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="bild5.jpg"><!--en favicon-->
+    <!--använder vw istället för em så att det blir mindre när sidan skalas ner-->
+</head>
+<body>
+    <!--overlay när man trycker på "kontakt"-->
+    <div id="kontakt-overlay">
+        <!--själva boxen-->
+        <div class="kontakt-overlay">
+            <div class="text-w-2">
+                Kontakta mig
+            </div>
+            <div id="X"></div>
+            <div style="font-size: 1.75vw; color:white">
+                <ul>
+                    <li>mail:
+                        <a href="mailto:carl.sterner@skola.taby.se">
+                            <div style="color:white; text-decoration: underline;">carl.sterner@skola.taby.se</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--sidmeny-->
+    <div class="menu">
+        <div class="flex-center-col">
+            <!--dehär 2 är positionerade absolut-->
+            <div class="text-w-3" id="carl">carl te23a</div>
+            <button id="kontakt"><span>Kontakta</span></button>
+            
+            <ul class="menu-list">
+                <a href="#top"><li class="menu-item">Om Mig</li></a>
+                <li class="menu-itemseparator">
+                    <div class="progress-bar"></div>
+                </li>
+                <a href="#middle"><li class="menu-item">Om Mig part.2</li></a>
+                <li class="menu-itemseparator">
+                    <div class="progress-bar"></div>
+                </li>
+                <a href="#bottom"><li class="menu-item">Kul & Arbete</li></a>
+            </ul>
+        </div>
+    </div>
+    <!--högst upp, det man ser först-->
+    <section class="hero-top" id="top">
+        <!--bakgrund-->
+        <svg id="bg-waves-bottom" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1920" height="1080" fill="#001220"></rect><path d="M0 674L45.7 691.5C91.3 709 182.7 744 274.2 765.5C365.7 787 457.3 795 548.8 788.3C640.3 781.7 731.7 760.3 823 735.7C914.3 711 1005.7 683 1097 676.2C1188.3 669.3 1279.7 683.7 1371.2 703.8C1462.7 724 1554.3 750 1645.8 740.2C1737.3 730.3 1828.7 684.7 1874.3 661.8L1920 639L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#001a2d"></path><path d="M0 814L45.7 818.5C91.3 823 182.7 832 274.2 827.5C365.7 823 457.3 805 548.8 808.5C640.3 812 731.7 837 823 848C914.3 859 1005.7 856 1097 836.8C1188.3 817.7 1279.7 782.3 1371.2 763.2C1462.7 744 1554.3 741 1645.8 742.7C1737.3 744.3 1828.7 750.7 1874.3 753.8L1920 757L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#001e33"></path><path d="M0 904L45.7 893.7C91.3 883.3 182.7 862.7 274.2 846C365.7 829.3 457.3 816.7 548.8 826.2C640.3 835.7 731.7 867.3 823 875.8C914.3 884.3 1005.7 869.7 1097 871C1188.3 872.3 1279.7 889.7 1371.2 900.7C1462.7 911.7 1554.3 916.3 1645.8 906C1737.3 895.7 1828.7 870.3 1874.3 857.7L1920 845L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#00213a"></path><path d="M0 938L45.7 930C91.3 922 182.7 906 274.2 907.8C365.7 909.7 457.3 929.3 548.8 928.8C640.3 928.3 731.7 907.7 823 911.3C914.3 915 1005.7 943 1097 946.2C1188.3 949.3 1279.7 927.7 1371.2 918C1462.7 908.3 1554.3 910.7 1645.8 912.2C1737.3 913.7 1828.7 914.3 1874.3 914.7L1920 915L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#002541"></path><path d="M0 1023L45.7 1018.5C91.3 1014 182.7 1005 274.2 995.5C365.7 986 457.3 976 548.8 968C640.3 960 731.7 954 823 958.3C914.3 962.7 1005.7 977.3 1097 981.8C1188.3 986.3 1279.7 980.7 1371.2 981.8C1462.7 983 1554.3 991 1645.8 992.7C1737.3 994.3 1828.7 989.7 1874.3 987.3L1920 985L1920 1081L1874.3 1081C1828.7 1081 1737.3 1081 1645.8 1081C1554.3 1081 1462.7 1081 1371.2 1081C1279.7 1081 1188.3 1081 1097 1081C1005.7 1081 914.3 1081 823 1081C731.7 1081 640.3 1081 548.8 1081C457.3 1081 365.7 1081 274.2 1081C182.7 1081 91.3 1081 45.7 1081L0 1081Z" fill="#002948"></path></svg>
+        <h1 class="text-w-3" style="position:absolute; top:2vh; left:40%;">
+            Om Mig
+        </h1>
+        <!--texten brevid bilderna-->
+        <div class="flex-center-row">
+            <div class="hero-top-info">
+                <div style="font-size: 1.5vw; color:white">
+                    <ul>
+                        <li>skola:
+                            <div class="indent">Åva gymnasium</div>
+                        </li>
+                        <li>ålder:
+                            <br>
+                            <div class="indent"><span id="age">16</span></div>
+                        </li>
+                        <li>från:
+                            <div class="indent">Sverige</div>
+                        </li>
+                        <li>Bor:
+                            <div class="indent">Täby</div>
+                        </li>
+                        <li>Tro:
+                            <div class="indent">Kristen ✝️</div>
+                        </li>
+                        <li>Namn:
+                            <div class="indent">Carl STerner</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--några bilder på mig-->
+            <div class="profile-picture">
+                <div class="flex-center-row">
+                    <img class="profile-picture-item" src="bild1.png" alt="bild på mig">
+                    <img class="profile-picture-item" src="bild5.jpg" alt="bild på mig">
+                </div>
+                <div class="flex-center-row">
+                    <img class="profile-picture-item" src="bild2.jpg" alt="bild på mig">
+                    <img class="profile-picture-item" src="bild3.jpg" alt="bild på mig">
+                </div>
+            </div>
+        </div>
+        <!--knapp som skrollar nedåt-->
+        <a href="#middle" id="arrow-down">
+            <div class="arrow-down">
+                <svg  id="arrow-down-svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 5L12.7071 11.2929C12.3166 11.6834 11.6834 11.6834 11.2929 11.2929L5 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 13L12.7071 19.2929C12.3166 19.6834 11.6834 19.6834 11.2929 19.2929L5 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </a>
+    </section>
+    <!--hero 2-->
+    <section class="hero-middle" id="middle">
+        <div class="hero-middle-container">
+            <h1 class="text-w-3 hero-middle-header">
+                Om Mig part.2
+            </h1>
+            <!--container för boxarna-->
+            <div class="flex-center-row hero-m-content">
+                <!--första boxen- den till vänster-->
+                <div class="hero-m-content-box">
+                    <div class="hero-m-content-box-overlay">
+                        <div style="padding:10px;">
+                            <div class="text-w-2">
+                                Kul
+                            </div>
+                            <div style="font-size: 1.15vw;">
+                                <ul>
+                                    <li>
+                                        <h4>Termins- & Råvaruhandel</h4>
+                                        <p>Såsom "XAU/USD"(guld mot usd) och "NQ1!"(nasdaq terminer)</p>
+                                    </li>
+                                    <hr>
+                                    <li> 
+                                        <h4>Decentralliserad finans(DeFi)</h4>
+                                        <p>Solana-blockkedjan & nätverket eftersom där finns de flesta memecoins som man kan gambla</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--andra boxen i mitten-->
+                <div class="hero-m-content-box">
+                    <div class="hero-m-content-box-overlay">
+                        <div style="padding:10px;">
+                            <div class="text-w-2">
+                                Mål
+                            </div>
+                            <div style="font-size: 1.15vw;">
+                                <ul>
+                                    <li> 
+                                        <h4>Fritid</h4>
+                                        <p>Positivt EV & lönsam strategi gällande handel</p>
+                                        <p>Bänka 100kg</p>
+                                    </li>
+                                    <hr>
+                                    <li> 
+                                        <h4>Skola</h4>
+                                        <p>Bli nöjd med resultat</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tredje boxen-->
+                <div class="hero-m-content-box">
+                    <div class="hero-m-content-box-overlay">
+                        <div style="padding:10px;">
+                            <div class="text-w-2">
+                                Projekt
+                            </div>
+                            <div style="font-size: 1.15vw;">
+                                <ul>
+                                    <li> 
+                                        <h4> Erfarenhet</h4>
+                                        <p>flera 1000+ linjer projekt i språk som C++, Java, C# osv med OpenGL, SDL2 mm.</p>
+                                    </li>
+                                    <hr>
+                                    <li> 
+                                        <h4>Nya Projekt</h4>
+                                        <a href="#bottom" style="color:white; text-decoration: underline;"><div>Casino(inte klart)</div></a>
+                                        <p>Den här hemsidan</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--hero 3-->
+    <section class="hero-bottom" id="bottom">
+        <div class="flex-center-col hero-bottom-container">
+            <h1 class="hero-bottom-container-header">
+                Kul & Arbete
+            </h1>
+            <div class="text-w-1" style="margin-top:-3vh;">
+                (casino funkar)
+            </div>
+            <div class="flex-center-row hero-bottom-content">
+                <div class="casino-container" style="width:100%; height:100%;">
+                    <!--casino-->
+                    <iframe id="casino" src="casino/home.html" width="100%" height="100%"></iframe>
+                </div>
+                <div class="tradingview-container">
+                    <div id="tradingview-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!--bakgrund-->
+        <svg id="bg-waves-top" viewBox="0 0 1920 1080" width="100%" preserveAspectRatio="none" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1920" height="1080" fill="#004c86"></rect><path d="M0 370L45.7 374.5C91.3 379 182.7 388 274.2 387.2C365.7 386.3 457.3 375.7 548.8 381C640.3 386.3 731.7 407.7 823 394.7C914.3 381.7 1005.7 334.3 1097 309C1188.3 283.7 1279.7 280.3 1371.2 289.5C1462.7 298.7 1554.3 320.3 1645.8 344.2C1737.3 368 1828.7 394 1874.3 407L1920 420L1920 0L1874.3 0C1828.7 0 1737.3 0 1645.8 0C1554.3 0 1462.7 0 1371.2 0C1279.7 0 1188.3 0 1097 0C1005.7 0 914.3 0 823 0C731.7 0 640.3 0 548.8 0C457.3 0 365.7 0 274.2 0C182.7 0 91.3 0 45.7 0L0 0Z" fill="#005392"></path><path d="M0 319L45.7 323.5C91.3 328 182.7 337 274.2 337.5C365.7 338 457.3 330 548.8 318C640.3 306 731.7 290 823 290.2C914.3 290.3 1005.7 306.7 1097 299.2C1188.3 291.7 1279.7 260.3 1371.2 255.2C1462.7 250 1554.3 271 1645.8 268.7C1737.3 266.3 1828.7 240.7 1874.3 227.8L1920 215L1920 0L1874.3 0C1828.7 0 1737.3 0 1645.8 0C1554.3 0 1462.7 0 1371.2 0C1279.7 0 1188.3 0 1097 0C1005.7 0 914.3 0 823 0C731.7 0 640.3 0 548.8 0C457.3 0 365.7 0 274.2 0C182.7 0 91.3 0 45.7 0L0 0Z" fill="#00487f"></path><path d="M0 205L45.7 218.3C91.3 231.7 182.7 258.3 274.2 252.8C365.7 247.3 457.3 209.7 548.8 192.7C640.3 175.7 731.7 179.3 823 197C914.3 214.7 1005.7 246.3 1097 253.8C1188.3 261.3 1279.7 244.7 1371.2 228C1462.7 211.3 1554.3 194.7 1645.8 186.7C1737.3 178.7 1828.7 179.3 1874.3 179.7L1920 180L1920 0L1874.3 0C1828.7 0 1737.3 0 1645.8 0C1554.3 0 1462.7 0 1371.2 0C1279.7 0 1188.3 0 1097 0C1005.7 0 914.3 0 823 0C731.7 0 640.3 0 548.8 0C457.3 0 365.7 0 274.2 0C182.7 0 91.3 0 45.7 0L0 0Z" fill="#003e6c"></path><path d="M0 203L45.7 197C91.3 191 182.7 179 274.2 168.8C365.7 158.7 457.3 150.3 548.8 151.7C640.3 153 731.7 164 823 164.2C914.3 164.3 1005.7 153.7 1097 144.5C1188.3 135.3 1279.7 127.7 1371.2 127.7C1462.7 127.7 1554.3 135.3 1645.8 150C1737.3 164.7 1828.7 186.3 1874.3 197.2L1920 208L1920 0L1874.3 0C1828.7 0 1737.3 0 1645.8 0C1554.3 0 1462.7 0 1371.2 0C1279.7 0 1188.3 0 1097 0C1005.7 0 914.3 0 823 0C731.7 0 640.3 0 548.8 0C457.3 0 365.7 0 274.2 0C182.7 0 91.3 0 45.7 0L0 0Z" fill="#00335a"></path><path d="M0 94L45.7 95.5C91.3 97 182.7 100 274.2 104C365.7 108 457.3 113 548.8 104.3C640.3 95.7 731.7 73.3 823 74.8C914.3 76.3 1005.7 101.7 1097 113.8C1188.3 126 1279.7 125 1371.2 112.3C1462.7 99.7 1554.3 75.3 1645.8 69.7C1737.3 64 1828.7 77 1874.3 83.5L1920 90L1920 0L1874.3 0C1828.7 0 1737.3 0 1645.8 0C1554.3 0 1462.7 0 1371.2 0C1279.7 0 1188.3 0 1097 0C1005.7 0 914.3 0 823 0C731.7 0 640.3 0 548.8 0C457.3 0 365.7 0 274.2 0C182.7 0 91.3 0 45.7 0L0 0Z" fill="#002948"></path></svg>
+    
+    </section>
+    
+    <!--script for tradingview api:n, behövs för att visa tradingview sidan-->
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script>
+        new TradingView.widget({
+            "autosize": true,
+            "symbol": "NQ1!",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "hide_top_toolbar": true,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "save_image": false,
+            "container_id": "tradingview-chart"
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

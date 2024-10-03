@@ -1,0 +1,415 @@
+/*använder vw istället för em så att texten skalar med hemsidan*/
+/*skrev på engelska också pga muskelminne typ, känns konstigt med svenska*/
+body,html{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    --primary-color: #001220;
+    --secondary-color: #002948;
+    background-color: var(--secondary-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-w-1{
+    font-size:1vw;
+    color:white;
+}
+.text-w-2{
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+}
+.text-w-3{
+    font-size: 3vw;
+    color: white;
+}
+
+.flex-center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.flex-center-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* menyer ---------------------------------------------------*/
+
+#carl{
+    position:absolute;
+    top:10vh;
+}
+
+.menu{
+    position:fixed;
+    height:100vh;
+    width:25vw;
+    top:0px;
+    right:0px;
+    z-index: 5;
+}
+
+.menu-list{
+    position:absolute;
+    top:30vh;
+    display:flex;
+    flex-direction: column;
+    padding:5%;
+    margin-top: -5vh;
+    border-radius: 20px;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    color:white;
+    transition: all 0.2s ease-in-out;
+}
+.menu-item:hover{
+    transform:scale(1.02);
+    color:rgb(184, 184, 184);
+}
+
+.menu-item.active {
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.menu-itemseparator {
+    position:relative;
+    width: 5px;
+    height: 12vh; 
+    background-color: white;
+    margin: 10px auto;
+    list-style-type: none;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: grey;
+    backdrop-filter: blur(4px);
+    transition: height 0.1s ease
+}
+
+#kontakt{
+    position: fixed;
+    bottom:5vh;
+    width:12vw;
+    height:8vh;
+    border-radius: 20px;
+    font-size: 2vw;
+    background-color: #00000000;
+    border:none;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.5s;
+}
+#kontakt span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+#kontakt span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+#kontakt:hover span {
+    padding-right: 25px;
+}
+#kontakt:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+    
+#kontakt-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#kontakt-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.kontakt-overlay {
+    width: 50vw;
+    height: 50vh;
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: transform 0.5s ease;
+    transform: scale(0.8); 
+}
+
+#kontakt-overlay.show .kontakt-overlay {
+    transform: scale(1);
+}
+
+#X::after{
+    position: absolute;
+    top:-2px;
+    right:10px;
+    font-size: 2vw;
+    color:white;
+    content:'\2715';
+}
+
+#X:hover{
+    cursor:pointer;
+}
+
+    /*Hero top-----------------------------------------------*/
+
+#bg-waves-bottom{
+    height:100vh;
+    width:100%;
+}
+
+.hero-top {
+    position: relative;
+    height: 100vh; 
+    width: 100vw; 
+    overflow: hidden;
+}
+
+.hero-top-info{
+    position:absolute;
+    width:20vw;
+    height:60vh;
+    top:20vh;
+    right:35%;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.indent{
+    text-indent: 2vw;
+}
+
+.profile-picture{
+    position:absolute;
+    top:17vh;
+    left:20%;
+    width:20vw;
+    height:60vh;
+}
+
+.profile-picture-item{
+    -webkit-user-drag: none; 
+    border-radius: 20px;
+    height:32vh;
+    margin:10px;
+    box-shadow: 5px 5px 10px var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-picture-item:hover{
+    transform: scale(1.02);
+    box-shadow: 10px 10px 20px var(--primary-color);
+}
+
+#arrow-down{
+    position:absolute;
+    left:50%;
+    bottom:10vh;
+}
+
+.arrow-down {
+    animation-name: arrow-down-anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#arrow-down-svg{
+    width:2vw;
+}
+
+@keyframes arrow-down-anim{
+    0% {transform:translateY(0);}
+    20% {transform:translateY(25px);}
+    40% {transform:translateY(0);}
+    100% {transform:translateY(0);}
+}
+
+    /*Hero middle-------------------------------------------------------------*/
+
+.hero-middle-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-middle{
+    height:100vh;
+    width:70vw;
+    background-color: var(--secondary-color);
+}
+
+.hero-middle-header{
+    margin-left:10vw;
+    width:30vw;
+    text-align: end;
+    height:15vh;
+    border-radius: 20px;
+}
+
+.hero-m-content{
+    gap:5vw;
+    margin-left: 17.5vw;
+}
+.hero-m-content-box {
+    margin-top:-10vh;
+    width: 20vw;
+    height: 35vw;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden; 
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 10px #00000056;
+    transition:transform 0.2s ease-in-out;
+}
+
+.hero-m-content-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%; 
+    background: linear-gradient(to bottom left, #296b9e, #7b2994);
+    animation: spin-background 5s linear infinite;
+    transform-origin: center center;
+    z-index: 0;
+}
+
+.hero-m-content-box:hover{
+    transform: scale(1.01);
+}
+
+.hero-m-content-box-overlay {
+    color: white;
+    position: relative;
+    width: 19vw;
+    height: 34vw;
+    transform: translate(0.5vw, 0.5vw);
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+
+@keyframes spin-background {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    /*Hero bottom-------------------------------------------------------*/
+
+.hero-bottom {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+#bg-waves-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw !important; 
+    height: 100vh !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.hero-bottom-container {
+    position: relative;
+    z-index: 2; 
+    height: 100%;
+}
+
+.hero-bottom-content {
+    margin-top:5vh;
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    background-color: transparent; 
+    z-index: 2; 
+    gap:5vw;
+}
+
+.hero-bottom-container-header{
+    color:white;
+    font-size: 3vw;
+}
+
+.tradingview-container {
+    width: 100%;
+    height: 100%;
+}
+
+#casino{
+    border:none;
+    box-shadow: 10px 10px 10px #00000056;
+}
+
+.casino-container{
+    transition: all 0.15s ease-in-out;
+}
+
+.casino-container:hover{
+    transform:scale(1.01);
+    box-shadow: 20px 20px 20px #00000056;
+}
+
+#tradingview-chart {
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 10px #00000056;
+}
